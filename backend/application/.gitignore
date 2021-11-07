@@ -1,0 +1,9 @@
+build
+node_modules
+
+database.sqlite
+database.sqlite-journal
+
+.eslintcache
+
+.env

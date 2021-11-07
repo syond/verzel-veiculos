@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  backend:
+    image: node:lts-alpine3.14
+    container_name: verzel-veiculos-dev
+    working_dir: /backend
+    volumes:
+      - ./backend/application:/backend
+    ports:
+      - 3001:3001
+    networks:
+      - verzel-veiculos-network
+    command: ["npm", "run", "dev"]
+
+networks:
+  verzel-veiculos-network:
